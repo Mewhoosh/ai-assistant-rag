@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./chroma_data:/app/chroma_data
+      - llm-project-db:/app/data
+    env_file:
+      - .env
+    restart: unless-stopped
+
+volumes:
+  llm-project-db:

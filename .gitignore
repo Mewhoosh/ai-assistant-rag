@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+.env
+*.db
+chroma_data/
+uploads/*
+!uploads/.gitkeep
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Test / demo files
+test_document.txt
+*.txt.tmp
+

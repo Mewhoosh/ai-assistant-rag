@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM-Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>LLM-Project</h1>
+                <p>AI Assistant</p>
+                <button id="new-chat-btn" class="new-chat-btn">+ New Chat</button>
+            </div>
+
+            <div class="sidebar-section">
+                <h2>Upload Document</h2>
+                <form id="upload-form">
+                    <label class="upload-area" id="upload-area">
+                        <input type="file" id="file-input" accept=".pdf,.txt" hidden>
+                        <span class="upload-icon">+</span>
+                        <span class="upload-text">Drop file or click to browse</span>
+                        <span class="upload-hint">PDF or TXT, max 10 MB</span>
+                    </label>
+                    <div id="upload-status" class="upload-status" hidden></div>
+                </form>
+            </div>
+
+            <div class="sidebar-section">
+                <h2>Documents</h2>
+                <div id="document-list" class="document-list">
+                    <p class="empty-state">No documents uploaded yet.</p>
+                </div>
+            </div>
+
+            <div class="sidebar-section sidebar-section--grow">
+                <h2>History</h2>
+                <div id="conversation-list" class="conversation-list">
+                    <p class="empty-state">No conversations yet.</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="chat-area">
+            <div class="chat-messages" id="chat-messages">
+                <div class="welcome-message">
+                    <h2>Ask questions about your documents</h2>
+                    <p>Upload a PDF or TXT file, then ask anything about its content.</p>
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <form id="chat-form" class="chat-form">
+                    <input
+                        type="text"
+                        id="question-input"
+                        placeholder="Ask a question about your documents..."
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" id="send-btn">Send</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
