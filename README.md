@@ -32,7 +32,8 @@ The application supports two interaction modes:
 - **16 pytest tests** covering API and document-processing paths.
 
 ## Interface Preview
-The assistant was tested on `example_company_policy.pdf` uploaded through the UI.
+The assistant was tested on `example_company_policy.pdf` uploaded through the UI.<img width="1901" height="921" alt="example" src="https://github.com/user-attachments/assets/a7e9e7e5-dac4-4758-ae64-10f1ec2f277b" />
+
 The answers and cited sources shown in the UI are generated from retrieved chunks of `example_company_policy.pdf`.
 ## Architecture
 
@@ -47,7 +48,7 @@ The answers and cited sources shown in the UI are generated from retrieved chunk
                          |   /api/documents    |
                          |   /api/chat         |
                          |   /api/conversations|
-                         +---------+----------+
+                         +---------+-----------+
                                    |
                     +--------------+---------------+
                     |                              |
